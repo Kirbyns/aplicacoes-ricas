@@ -1,0 +1,6 @@
+os Titulos devem estar dentro da Section 
+
+tag footer, header, nav devem estar dentro da body 
+
+
+Sempre usar o Valodator w3 para corrigir a semantica do trabalho
