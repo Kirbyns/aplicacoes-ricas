@@ -51,57 +51,109 @@
         <section class="container my-5 py-3 border rounded-3 bg-light" id="formulario">
             <h3>Formulário</h3>
             <form class="form-inline">
+                <div class="primeiraparte">
+                    <div class="row mt-3">
 
-                <div class="row mt-3">
+                        <div class=" col">
+                            <label for="nome">Nome</label>
+                            <input type="text" class="form-control" id="nome" placeholder="Fulaninho de tal" required>
+                        </div>
 
-                    <div class=" col">
-                        <label for="nome">Nome</label>
-                        <input type="text" class="form-control" id="nome" placeholder="Fulaninho de tal" required>
+                        <div class="col">
+                            <label for="data">Data de Nascimento</label>
+                            <input type="date" class="form-control" id="data" required>
+                        </div>
+
+                        <div class=" col">
+                            <label for="telefone">Telefone</label>
+                            <input type="tel" class="form-control" id="telefone" placeholder="EX: (11) 98790-2080"
+                                pattern="\([0-9]{2}\)[\s][0-9]{5}-[0-9]{4}" required>
+                        </div>
+
+                    </div>
+                    <div class="row mt-3">
+
+                        <div class=" col">
+                            <label for="endereco">Endereço</label>
+                            <input type="text" class="form-control" id="endereco" placeholder="Estr. do campo limpo 143 "
+                                required>
+                        </div>
+
+                    </div>
+                    <div class="row mt-3">
+
+                        <div class=" col">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="flavinhodopneu@gmail.com"
+                                required>
+                        </div>
+
                     </div>
 
-                    <div class="col">
-                        <label for="data">Data de Nascimento</label>
-                        <input type="date" class="form-control" id="data" required>
+                    <div class="row mt-3">
+
+                        <div class=" col">
+                            <label for="link">Página pessoal</label>
+                            <input type="url" class="form-control" id="link" placeholder="https://github.com/Kirbyns"
+                                required>
+                        </div>
+
+                    </div>
+                </div> <!-- fechamento primeira parte-->
+                
+                <hr>
+                    
+                <div class="segundaparte row gx-3 gy-2 align-items-center"> <!--inicio segunda parte-->
+                    <h4>Produtos</h4>
+                   <div class="col"> 
+                    <select class="form-select" required >
+                        <option selected>Navegador Preferido</option> <!-- está dando erro aqui pq está selecionado sem valor, porem é para mostrar o texto.-->
+                        <option value="1">Chrome</option>
+                        <option value="2">Edge</option>
+                        <option value="3">Opera</option>
+                        <option value="4">FireFox</option>
+                      </select>
+                    </div>
+                    <div class="col-2">
+                        <label >Selecione sua cor favorita</label>
+                        <input type="color" class="form-control" > <!-- aqui tive dificuldade para deixar a cor ao lado do texto-->
                     </div>
 
-                    <div class=" col">
-                        <label for="telefone">Telefone</label>
-                        <input type="tel" class="form-control" id="telefone" placeholder="EX: (11) 98790-2080"
-                            pattern="\([0-9]{2}\)[\s][0-9]{5}-[0-9]{4}" required>
+                    <div class="col"> 
+                        <label >Selecione ou pesquise um pais favorito</label>
+                        <input class="form-control" list="datalist" placeholder="Digite para achar...">
+                        <datalist id="datalist">
+                            <option value="Brasil">
+                            <option value="Argentina">
+                            <option value="Nova Zelandia">
+                            <option value="Suiça">
+                            <option value="Estados Unidos">
+                            <option value="França">
+                            <option value="Italia">
+                            <option value="Portugal">
+                            <option value="Chile">
+                            <option value="Venezuela">
+                        </datalist>
                     </div>
 
                 </div>
-                <div class="row mt-3">
-
-                    <div class=" col">
-                        <label for="telefone">Endereço</label>
-                        <input type="text" class="form-control" id="endereco" placeholder="Estr. do campo limpo 143 "
-                            required>
+                <hr>
+                <div class="terceiraparte row gx-3 gy-2"><!--inicio terceira parte-->
+                    <h4>Comentário e sugestões</h4>
+                    <div class="form-floating col">
+                        <textarea class="form-control" placeholder="Deixe um comentario!!" style="height: 300px" id="comentarios"></textarea>
+                        <label for="comentarios">Deixe seu comentário!</label> <!--isso aqui é muito maneiro-->
+                    </div>
+                    <div class="form-floating col">
+                        <textarea class="form-control" placeholder="Sugestões para o futuro" style="height: 300px" id="sugestoes"></textarea>
+                        <label for="sugestoes">Deixe aqui sugestões para melhorarmos!</label>
                     </div>
 
-                </div>
-                <div class="row mt-3">
-
-                    <div class=" col">
-                        <label for="email">Email</label>
-                        <input type="email" class="form-control" id="email" placeholder="flavinhodopneu@gmail.com"
-                            required>
-                    </div>
-
-                </div>
-
-                <div class="row mt-3">
-
-                    <div class=" col">
-                        <label for="link">Página pessoal</label>
-                        <input type="url" class="form-control" id="link" placeholder="https://github.com/Kirbyns"
-                            required>
-                    </div>
 
                 </div>
 
 
-                <button class="btn btn-dark my-4" type="submit">Enviar</button>
+                <button class="btn btn-dark my-4 btn-lg" type="submit">Enviar</button>
             </form>
 
 
